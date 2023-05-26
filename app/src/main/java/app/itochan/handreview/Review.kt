@@ -2,8 +2,11 @@ package app.itochan.handreview
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -21,11 +24,13 @@ fun Review(navController: NavHostController) {
 
   PokerHandReviewAppTheme {
     Row(
-      modifier = Modifier
-        .fillMaxSize()
-        .padding(8.dp)
+      modifier = Modifier.fillMaxSize()
     ) {
-      Column(modifier = Modifier.weight(1f)) {
+      Column(
+        modifier = Modifier
+          .weight(1f)
+          .padding(4.dp)
+      ) {
         Text(
           modifier = Modifier.padding(bottom = 8.dp),
           text = "Preflop"
@@ -41,7 +46,16 @@ fun Review(navController: NavHostController) {
           action = "Call 1.50"
         )
       }
-      Column(modifier = Modifier.weight(1f)) {
+      Divider(
+        modifier = Modifier
+          .width(1.dp)
+          .fillMaxHeight()
+      )
+      Column(
+        modifier = Modifier
+          .weight(1f)
+          .padding(4.dp)
+      ) {
         Text(
           modifier = Modifier.padding(bottom = 8.dp),
           text = "Flop"
@@ -62,7 +76,16 @@ fun Review(navController: NavHostController) {
           action = "Call 2.50"
         )
       }
-      Column(modifier = Modifier.weight(1f)) {
+      Divider(
+        modifier = Modifier
+          .width(1.dp)
+          .fillMaxHeight()
+      )
+      Column(
+        modifier = Modifier
+          .weight(1f)
+          .padding(4.dp)
+      ) {
         Text(
           modifier = Modifier.padding(bottom = 8.dp),
           text = "Turn"
@@ -88,7 +111,16 @@ fun Review(navController: NavHostController) {
           action = "Call 10"
         )
       }
-      Column(modifier = Modifier.weight(1f)) {
+      Divider(
+        modifier = Modifier
+          .width(1.dp)
+          .fillMaxHeight()
+      )
+      Column(
+        modifier = Modifier
+          .weight(1f)
+          .padding(4.dp)
+      ) {
         Text(
           modifier = Modifier.padding(bottom = 8.dp),
           text = "River"
